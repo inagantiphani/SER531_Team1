@@ -1,0 +1,30 @@
+<div >
+  <div class="header" style="padding: 60px;
+text-align: center;
+background: #1abc9c;
+color: white;font-size: 30px;">
+    <h1>Ontology Extraction </h1>
+    
+  </div>
+  <br />
+  <br />
+  
+  <div class="form" style="padding-top: 100PX;padding-left: 20PX;">
+    <div style="border-radius: 5px">
+      <input style="width:100%" type="text" [(ngModel)]="searchText" placeholder="Enter your data">
+      <br/>
+       <div style="padding-top: 10PX;padding-left: 28PX;">
+      <button style="width:60%" (click)="search()">Summarize</button>
+    </div>
+    </div>
+  
+   
+  </div>
+  <br /><br />
+  <div class="msg-container">
+    <p class="msg">{{outputText}}</p>
+  </div>
+  <div style="padding-top: 200PX;padding-left: 1000PX;font-size: 35PX">
+SER 531-Team 1 
+  <div>
+</div>

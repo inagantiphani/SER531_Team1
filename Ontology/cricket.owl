@@ -1,0 +1,500 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/cricket#"
+     xml:base="http://www.semanticweb.org/cricket"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:cricket="http://www.semanticweb.org/cricket#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/cricket"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/cricket#documentkeyword -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/cricket#documentkeyword"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cricket#documentkeywords -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/cricket#documentkeywords">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/cricket#At -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cricket#At">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cricket#Tournament"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cricket#Venue"/>
+        <rdfs:comment>This object propery is used to show where the matches are taking place</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cricket#Played -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cricket#Played">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cricket#Team1"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cricket#Tournament"/>
+        <rdfs:comment>This object property shows the matches played by the team1</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cricket#against -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cricket#against">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cricket#Tournament"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cricket#Team2"/>
+        <rdfs:comment>This object property shows against whom the matches are played</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/cricket#Unambiguous_Properties -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cricket#Unambiguous_Properties">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:comment>Properties which use the keywords are part of unambiguous properties.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cricket#id -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cricket#id">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/cricket#Unambiguous_Properties"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cricket#Match"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <documentkeyword rdf:datatype="http://www.w3.org/2001/XMLSchema#int"></documentkeyword>
+        <rdfs:comment>This data property gives the match id</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cricket#on -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cricket#on">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/cricket#Unambiguous_Properties"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cricket#Match"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <documentkeyword rdf:datatype="http://www.w3.org/2001/XMLSchema#string">on</documentkeyword>
+        <rdfs:comment>This data property defines when the match has taken place</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cricket#toss -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cricket#toss">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/cricket#Unambiguous_Properties"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cricket#Team2"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <documentkeyword rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bat
+bowl</documentkeyword>
+        <rdfs:comment>This data property shows who won the toss</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cricket#won -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cricket#won">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/cricket#Unambiguous_Properties"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cricket#Result"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <documentkeyword rdf:datatype="http://www.w3.org/2001/XMLSchema#string">won by wickets
+won by runs</documentkeyword>
+        <rdfs:comment>This data property shows the details of the win</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/cricket#Ambiguous_Classes -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cricket#Ambiguous_Classes">
+        <rdfs:comment>Classes which are able to be derived into are known as ambiguous classes.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cricket#Match -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cricket#Match">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cricket#UnAmbiguous_Classes"/>
+        <documentkeyword rdf:datatype="http://www.w3.org/2001/XMLSchema#string">match id</documentkeyword>
+        <rdfs:comment>this class gives the details of the match going on which is the match id of the respective match</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cricket#Result -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cricket#Result">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cricket#UnAmbiguous_Classes"/>
+        <documentkeyword>outcome</documentkeyword>
+        <rdfs:comment>This class shows the outcome of the match</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cricket#Team1 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cricket#Team1">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cricket#Ambiguous_Classes"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/cricket#Team2"/>
+        <rdfs:comment>This class gives the details of the matches team1 has played.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cricket#Team2 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cricket#Team2">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cricket#Ambiguous_Classes"/>
+        <rdfs:comment>This class gives the details of the against whom the matches are played</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cricket#Tournament -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cricket#Tournament">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cricket#UnAmbiguous_Classes"/>
+        <documentkeyword rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a T20 match
+a ODI match
+a Test match</documentkeyword>
+        <rdfs:comment>This class gives the details of the type of match using the keywords in the document.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cricket#UnAmbiguous_Classes -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cricket#UnAmbiguous_Classes">
+        <rdfs:comment>Classes which are derived from keywords are declared as sub-classes under UnAmbiguous classes</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cricket#Venue -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cricket#Venue">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cricket#Ambiguous_Classes"/>
+        <rdfs:comment>This class gives the details of the venue where the matches are taking place.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/cricket#Afghanistan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cricket#Afghanistan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cricket#Team2"/>
+        <At rdf:resource="http://www.semanticweb.org/cricket#Bangalore"/>
+        <against rdf:resource="http://www.semanticweb.org/cricket#Netherlands"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cricket#Auckland -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cricket#Auckland">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cricket#Venue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cricket#Australia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cricket#Australia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cricket#Team1"/>
+        <At rdf:resource="http://www.semanticweb.org/cricket#Perth"/>
+        <Played rdf:resource="http://www.semanticweb.org/cricket#Pakistan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cricket#Bangalore -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cricket#Bangalore">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cricket#Venue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cricket#Bangladesh -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cricket#Bangladesh">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cricket#Team1"/>
+        <At rdf:resource="http://www.semanticweb.org/cricket#Auckland"/>
+        <Played rdf:resource="http://www.semanticweb.org/cricket#Ireland"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cricket#Birmingham -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cricket#Birmingham">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cricket#Venue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cricket#Centurion -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cricket#Centurion">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cricket#Venue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cricket#England -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cricket#England">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cricket#Team2"/>
+        <At rdf:resource="http://www.semanticweb.org/cricket#Bangalore"/>
+        <against rdf:resource="http://www.semanticweb.org/cricket#India"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cricket#HongKong -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cricket#HongKong">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cricket#Team2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cricket#India -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cricket#India">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cricket#Team1"/>
+        <At rdf:resource="http://www.semanticweb.org/cricket#Bangalore"/>
+        <Played rdf:resource="http://www.semanticweb.org/cricket#Pakistan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cricket#Ireland -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cricket#Ireland">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cricket#Team1"/>
+        <Played rdf:resource="http://www.semanticweb.org/cricket#Srilanka"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cricket#Karachi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cricket#Karachi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cricket#Venue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cricket#Nepal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cricket#Nepal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cricket#Team2"/>
+        <against rdf:resource="http://www.semanticweb.org/cricket#SouthAfrica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cricket#Netherlands -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cricket#Netherlands">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cricket#Team1"/>
+        <Played rdf:resource="http://www.semanticweb.org/cricket#Pakistan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cricket#NewZealand -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cricket#NewZealand">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cricket#Team2"/>
+        <At rdf:resource="http://www.semanticweb.org/cricket#Auckland"/>
+        <against rdf:resource="http://www.semanticweb.org/cricket#SouthAfrica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cricket#Pakistan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cricket#Pakistan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cricket#Team2"/>
+        <against rdf:resource="http://www.semanticweb.org/cricket#Australia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cricket#Perth -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cricket#Perth">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cricket#Venue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cricket#SouthAfrica -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cricket#SouthAfrica">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cricket#Team1"/>
+        <At rdf:resource="http://www.semanticweb.org/cricket#Centurion"/>
+        <Played rdf:resource="http://www.semanticweb.org/cricket#WestIndies"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cricket#Srilanka -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cricket#Srilanka">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cricket#Team1"/>
+        <Played rdf:resource="http://www.semanticweb.org/cricket#WestIndies"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cricket#T20 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cricket#T20">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cricket#Tournament"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cricket#WestIndies -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cricket#WestIndies">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cricket#Team2"/>
+        <against rdf:resource="http://www.semanticweb.org/cricket#Ireland"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cricket#Won -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cricket#Won">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cricket#Result"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cricket#tied -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cricket#tied">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cricket#Result"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cricket#145227 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cricket#145227">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cricket#Match"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cricket#216633 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cricket#216633">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cricket#Match"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cricket#269970 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cricket#269970">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cricket#Match"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/cricket#Match"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cricket#Result"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cricket#Tournament"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

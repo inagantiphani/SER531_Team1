@@ -1,0 +1,21 @@
+
+.header {
+  text-align: center;
+  font-size: 2em;
+  background-color: white;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.msg-container {
+  display: flex;
+  justify-content: center;
+}
+
+.msg {
+  font-size: 1.5em;
+}
