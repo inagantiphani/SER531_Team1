@@ -6,3 +6,8 @@
 3. Clone the project onto your local repository and traverse to file location on the terminal
 4. Run the command 
      ng serve -o
+     
+#To run preproc
+1. pip install spacy
+2. pip install neuralcoref
+3.python Extraction_of_triples.py
